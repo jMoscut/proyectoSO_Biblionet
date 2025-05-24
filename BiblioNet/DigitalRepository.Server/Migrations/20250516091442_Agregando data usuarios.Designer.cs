@@ -3,6 +3,7 @@ using System;
 using DigitalRepository.Server.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DigitalRepository.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250516091442_Agregando data usuarios")]
+    partial class Agregandodatausuarios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -351,7 +354,7 @@ namespace DigitalRepository.Server.Migrations
                             Id = 2L,
                             CreatedAt = new DateTime(2025, 2, 17, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = 1L,
-                            Description = "Cargador",
+                            Description = "Visualizador",
                             Name = "DG",
                             State = 1
                         },
@@ -360,7 +363,7 @@ namespace DigitalRepository.Server.Migrations
                             Id = 3L,
                             CreatedAt = new DateTime(2025, 2, 17, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = 1L,
-                            Description = "Visualizador",
+                            Description = "Cargador",
                             Name = "CD",
                             State = 1
                         });
@@ -553,7 +556,7 @@ namespace DigitalRepository.Server.Migrations
                             CreatedAt = new DateTime(2025, 2, 17, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = 1L,
                             Email = "emerson@gmail.com",
-                            Name = "Cargador",
+                            Name = "Visualizador",
                             Number = "12345678",
                             Password = "$2a$12$86Ty8oUVWKPbU8JqCII9VO.FgM1C10dweQ4xKhM4jj1LWL9jwNu7.",
                             RecoveryToken = "",
@@ -567,7 +570,7 @@ namespace DigitalRepository.Server.Migrations
                             CreatedAt = new DateTime(2025, 2, 17, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = 1L,
                             Email = "jackie@gmail.com",
-                            Name = "Visualizador",
+                            Name = "Cargador",
                             Number = "12345678",
                             Password = "$2a$12$86Ty8oUVWKPbU8JqCII9VO.FgM1C10dweQ4xKhM4jj1LWL9jwNu7.",
                             RecoveryToken = "",
